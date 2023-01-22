@@ -20,7 +20,7 @@ const ContactAddForm = ({ onSubmit }) => {
     setForm({ ...initialState });
   };
 
-  const { name, number } = form;
+  const { name, phone } = form;
 
   return (
     <>
@@ -39,10 +39,10 @@ const ContactAddForm = ({ onSubmit }) => {
         <Label>Number</Label>
         <Input
           type="tel"
-          name="number"
+          name="phone"
           placeholder="Enter phone number ..."
           onChange={handleChange}
-          value={number}
+          value={phone}
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required

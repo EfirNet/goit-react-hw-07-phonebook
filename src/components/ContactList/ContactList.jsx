@@ -4,7 +4,7 @@ const ContactList = ({ contacts, deleteContact }) => {
   const elements = contacts.map(item => (
     <Li key={item.id}>
       <Name>{item.name}:</Name>
-      <Number>{item.number}</Number>
+      <Number>{item.phone}</Number>
       <Button onClick={() => deleteContact(item.id)}>Delete</Button>
     </Li>
   ));
