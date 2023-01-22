@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 import ContactList from './ContactList';
 import Filter from './Filter';
-import ContactAddForm from './ContactAddForm';
+import ContactForm from './ContactForm';
 import { Title, SubTitle, Wrapper } from './Phonebook.styled';
 
 import {
@@ -54,7 +54,7 @@ const Phonebook = () => {
     <>
       <Wrapper>
         <Title>Phonebook</Title>
-        <ContactAddForm onSubmit={addContact} />
+        <ContactForm onSubmit={addContact} />
         <SubTitle>Contacts</SubTitle>
         <Filter filter={filter} handleChange={changeFilter} />
         {isLoading && <p>...Loading</p>}
